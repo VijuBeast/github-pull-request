@@ -4,6 +4,7 @@ import List from './components/List';
 import {Virtuoso} from 'react-virtuoso';
 import withListLoading from './components/withListLoading';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const ListLoading = withListLoading(List);
