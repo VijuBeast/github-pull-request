@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import {ExternalLink} from 'react-external-link'
+// import Moment from 'moment'
 import '../App.css'
 
 const List = (props) => {
@@ -28,7 +29,7 @@ const List = (props) => {
             <td>{pull.user.login}</td>
             <td>{pull.created_at}</td>
             <td>{pull.requested_reviewers.map((reviewers) => {return (reviewers.login)})}</td>
-            <td>{pull.labels.map((label) => {return (label.name)})}</td>
+            <td>{pull.labels.map((label) => {return (label.name + ",")})}</td>
           </tr>
         );
       })}
