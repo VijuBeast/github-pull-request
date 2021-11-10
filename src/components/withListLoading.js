@@ -8,12 +8,12 @@ function WithListLoading(Component) {
       // <p style={{ textAlign: 'center', fontSize: '30px' }}>
       //   Hold on, fetching data may take some time 😊
       // </p>
-      <Loader
+      <Loader style={{ textAlign: "center" }}
         type="Puff"
         color="#00BFFF"
-        height={100}
-        width={100}
-        timeout={3000} //3 secs
+        height={200}
+        width={200}
+        timeout={1000} 
       />
     );
   };
