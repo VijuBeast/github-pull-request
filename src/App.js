@@ -23,7 +23,7 @@ function App() {
   });
   const [error, setError] = useState(null);
   const [page, setPage] = useState(1);
-  const [pull, setPull] = useState([]);
+  const [, setPull] = useState([]);
 
   useEffect(() => {
     setAppState({ loading: true });
