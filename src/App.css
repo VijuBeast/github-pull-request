@@ -2,3 +2,9 @@
   color: #61dafb;
   text-decoration: none;
 }
+.material-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
