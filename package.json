@@ -17,6 +17,7 @@
     "react-infinite-scroll-component": "^6.1.0",
     "react-loader-spinner": "^4.0.0",
     "react-scripts": "^3.4.4",
+    "react-super-responsive-table": "^5.2.0",
     "react-virtuoso": "^2.2.7",
     "web-vitals": "^1.1.2",
     "webpack": "^4.42.0"

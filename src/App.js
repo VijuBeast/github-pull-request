@@ -8,11 +8,12 @@ import Button from "@mui/material/Button";
 import "./App.css";
 
 const Div = styled("div")(({ theme }) => ({
-  ...theme.typography.h4,
+  ...theme.typography.h5,
   backgroundColor: theme.palette.background.paper,
   padding: theme.spacing(1),
   textAlign: "center",
   textDecoration: "underline",
+  fontWeight: 'bold'
 }));
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
   });
   const [error, setError] = useState(null);
   const [page, setPage] = useState(1);
-  const [, setPull] = useState([]);
+  const [,  setPull] = useState([]);
 
   useEffect(() => {
     setAppState({ loading: true });
