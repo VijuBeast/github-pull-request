@@ -63,11 +63,11 @@ function App() {
       {error && <Div className="error">{error}</Div>}
       <ListLoading isLoading={appState.loading} pulls={appState.pulls} />
       <Stack spacing={10} direction="row" className="material-button">
-        <Button color="secondary" variant="outlined" onClick={() => setPage(page + 1)}>
-          NEXT
-        </Button>
         <Button color="secondary" variant="outlined" onClick={() => setPage(page - 1)}>
           PREVIOUS
+        </Button>
+        <Button color="secondary" variant="outlined" onClick={() => setPage(page + 1)}>
+          NEXT
         </Button>
       </Stack>
     </div>
