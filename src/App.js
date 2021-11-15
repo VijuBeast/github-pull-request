@@ -13,7 +13,7 @@ const Div = styled("div")(({ theme }) => ({
   padding: theme.spacing(1),
   textAlign: "center",
   textDecoration: "underline",
-  fontWeight: 'bold'
+  fontWeight: "bold",
 }));
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
   });
   const [error, setError] = useState(null);
   const [page, setPage] = useState(1);
-  const [,  setPull] = useState([]);
+  const [, setPull] = useState([]);
 
   useEffect(() => {
     setAppState({ loading: true });
@@ -44,31 +44,35 @@ function App() {
         setError(err.message);
       });
   }, [setAppState, page]);
-
-  // const scrollToEnd = () => {
-  //   setPage(page + 1);
-  // };
-
-  // window.onscroll = function () {
-  //   if (
-  //     window.innerHeight + document.documentElement.scrollTop ===
-  //     document.documentElement.offsetHeight
-  //   ) {
-  //     scrollToEnd()
-  //   }};
-
+  
   return (
     <div>
       <Div>{"NEOVIM PULL REQUEST"}</Div>
       {error && <Div className="error">{error}</Div>}
       <ListLoading isLoading={appState.loading} pulls={appState.pulls} />
       <Stack spacing={10} direction="row" className="material-button">
-        <Button color="secondary" variant="outlined" onClick={() => setPage(page - 1)}>
-          PREVIOUS
-        </Button>
-        <Button color="secondary" variant="outlined" onClick={() => setPage(page + 1)}>
-          NEXT
-        </Button>
+        {page === 1 ? (
+          <Button disabled>Previous</Button>
+        ) : (
+          <Button
+            color="secondary"
+            variant="outlined"
+            onClick={() => setPage(page - 1)}
+          >
+            PREVIOUS
+          </Button>
+        )}
+        {appState.pulls && appState.pulls.length === 0 ? (
+          <Button disabled>Next</Button>
+        ) : (
+          <Button
+            color="secondary"
+            variant="outlined"
+            onClick={() => setPage(page + 1)}
+          >
+            NEXT
+          </Button>
+        )}
       </Stack>
     </div>
   );
